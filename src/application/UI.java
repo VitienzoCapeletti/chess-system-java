@@ -45,7 +45,8 @@ public class UI {
             char column = s.charAt(0);
             int row = Integer.parseInt(s.substring(1));
             return new ChessPosition(column, row);
-        } catch (RuntimeException e) {
+        }
+        catch (RuntimeException e) {
             throw new InputMismatchException("Error reading Ches poisition. Valid values are from a1 to h8.");
         }
     }
@@ -61,7 +62,8 @@ public class UI {
             if (chessMatch.getCheck()) {
                 System.out.println("CHECK!");
             }
-        } else {
+        }
+        else {
             System.out.println("CHECKMATE!");
             System.out.println("Winner: " + chessMatch.getCurrentPlayer());
         }
